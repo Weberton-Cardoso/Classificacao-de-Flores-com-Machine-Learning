@@ -23,6 +23,30 @@ A API realizou o processo de feature engineering e retornou o resultado da previ
 Instruções de Uso
 Treinamento e Avaliação
 
+Uso do Postman para Testar a API
+
+Abra o Postman.
+Crie uma nova requisição.
+Selecione o método POST.
+No campo de URL, insira: http://127.0.0.1:5000/predict.
+Vá para a aba Headers e adicione o cabeçalho:
+Content-Type: application/json
+Vá para a aba Body e selecione o tipo raw. Insira o seguinte JSON no corpo da requisição:
+
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2
+}
+
+Clique no botão Send para enviar a requisição.
+Verifique a resposta no painel de resposta do Postman, que deve conter a previsão da espécie da flor com base nas características fornecidas.
+Verificação da API
+
+A resposta da API deve mostrar a previsão da espécie da flor com base nos parâmetros fornecidos. Verifique o resultado no painel de resposta do Postman.
+Com estas instruções, você deve ser capaz de reproduzir a pipeline de treinamento e avaliação do modelo e iniciar a API para realizar previsões usando o Postman.
+
 Foi necessário executar o script Python que continha a pipeline para treinar o modelo com a base de dados Iris e avaliar seu desempenho.
 Utilização da API
 
